@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func ButtonTapped(_ sender: Any) {
+        let logInVC: UIStoryboard = UIStoryboard(name: "WelcomeView", bundle: nil)
+        let logIn = logInVC.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+        
+        navigationController?.pushViewController(logIn, animated: true)
+    }
+    
 }
 
